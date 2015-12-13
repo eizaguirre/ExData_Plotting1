@@ -7,7 +7,7 @@ ihepc$Datetime <- strptime(ihepc$Datetime, "%d/%m/%Y %H:%M:%S")
 ihepc <- subset(ihepc, ihepc$Datetime >= "2007-02-01 00:00:00" & ihepc$Datetime <= "2007-02-02 23:59:59" )
 
 #Creates a line graph with the Global_active_power variable
-plot(ihepc$Datetime, as.numeric(ihepc$Global_active_power), , xlab="", ylab = "Global Active Power (kilowatts)", type = "l")
+plot(ihepc$Datetime, as.numeric(ihepc$Global_active_power), xlab="", ylab = "Global Active Power (kilowatts)", type = "l")
 
 #Exports the line graph to a PNG file
 dev.copy(png, file = "plot2.png")
